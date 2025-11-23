@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메일 다듬기</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>메일 다듬기</h1>
+
+    <div class="status" id="status">
+      네이버 메일 페이지에서 사용해주세요
+    </div>
+
+    <div class="options">
+      <div class="option-group">
+        <label for="recipient">수신자</label>
+        <select id="recipient">
+          <option value="">선택 안함</option>
+          <option value="교수님">교수님</option>
+          <option value="상사">상사</option>
+          <option value="동료">동료</option>
+          <option value="고객">고객</option>
+          <option value="친구">친구</option>
+        </select>
+      </div>
+
+      <div class="option-group">
+        <label for="tone">톤</label>
+        <select id="tone">
+          <option value="formal">격식체</option>
+          <option value="polite">정중함</option>
+          <option value="casual">캐주얼</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="rewriteBtn" class="primary-btn" disabled>
+      메일 다듬기
+    </button>
+
+    <div class="result-container" id="resultContainer" style="display: none;">
+      <h2>개선 사항</h2>
+      <ul id="suggestions"></ul>
+    </div>
+
+    <div class="settings">
+      <details>
+        <summary>설정</summary>
+        <div class="setting-group">
+          <label for="serverUrl">서버 URL</label>
+          <input type="text" id="serverUrl" value="http://localhost:8080">
+          <button id="saveSettings" class="secondary-btn">저장</button>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

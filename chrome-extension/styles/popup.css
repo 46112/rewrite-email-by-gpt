@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  width: 320px;
+  padding: 16px;
+  background: #f5f5f5;
+}
+
+.container {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.status {
+  padding: 10px;
+  border-radius: 4px;
+  background: #e3f2fd;
+  color: #1565c0;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.status.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.status.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.loading {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.options {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.option-group {
+  flex: 1;
+}
+
+.option-group label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.option-group select,
+.setting-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  background: white;
+}
+
+.option-group select:focus,
+.setting-group input:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background: #1976d2;
+}
+
+.primary-btn:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  padding: 6px 12px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.secondary-btn:hover {
+  background: #e0e0e0;
+}
+
+.result-container {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.result-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.result-container li {
+  font-size: 12px;
+  color: #555;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-container li:last-child {
+  border-bottom: none;
+}
+
+.result-container li::before {
+  content: "•";
+  color: #2196f3;
+  margin-right: 8px;
+}
+
+.settings {
+  margin-top: 16px;
+}
+
+.settings details {
+  font-size: 12px;
+}
+
+.settings summary {
+  cursor: pointer;
+  color: #666;
+  padding: 4px 0;
+}
+
+.setting-group {
+  margin-top: 8px;
+}
+
+.setting-group label {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 4px;
+}

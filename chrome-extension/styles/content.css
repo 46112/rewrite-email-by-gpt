@@ -1,0 +1,73 @@
+/* 메일 다듬기 버튼 스타일 */
+.mail-rewrite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+.mail-rewrite-btn:hover {
+  background: #1976d2;
+}
+
+.mail-rewrite-btn.loading {
+  background: #ff9800;
+  cursor: wait;
+}
+
+.mail-rewrite-btn.loading::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 토스트 메시지 */
+.mail-rewrite-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10000;
+  animation: slideIn 0.3s ease;
+}
+
+.mail-rewrite-toast.success {
+  background: #4caf50;
+}
+
+.mail-rewrite-toast.error {
+  background: #f44336;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

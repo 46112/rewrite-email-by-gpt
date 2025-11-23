@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "메일 다듬기",
+  "version": "1.0.0",
+  "description": "AI를 활용하여 메일 내용을 자연스럽게 다듬어주는 확장프로그램",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://mail.naver.com/*",
+    "http://localhost:8080/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.naver.com/*"],
+      "js": ["content.js"],
+      "css": ["styles/content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
